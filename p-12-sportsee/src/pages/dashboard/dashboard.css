@@ -1,4 +1,6 @@
 .user-sessions-wrapper{
     gap: 30px;
     margin-top: 30px;
+    display:flex;
+    width: 835px;
 }
