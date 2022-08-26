@@ -3,12 +3,11 @@ import {LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContain
 import './userAvgSessions.css'
     
 const formatDay = day => {
-    const newDayFormat = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
-    if (day) return newDayFormat[day - 1]
+    const dayFormat = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
+    if (day) return dayFormat[day - 1]
 }
 
 function UserAgvSessions (props) {
-    console.log(props.useragvsessions.sessions)
     return(
         <div className="user-agv-sessions">
             <div className='user-avg-title'>Durée moyenne des sessions</div>
