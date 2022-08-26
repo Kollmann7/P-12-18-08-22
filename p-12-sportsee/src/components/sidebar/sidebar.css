@@ -6,6 +6,7 @@
     background-color: #000;
     left: 0;
     min-height: 780px;
+    height: 100%;
     position: absolute;
     width: 120px;
 }
