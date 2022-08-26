@@ -11,7 +11,6 @@ const formatDate = date => {
 
 
 function UserActivity (props){
-  console.log(props.useractivity)
     return(
       <div className="user-activity-container">
         <div className="user-activity-wrapper">
@@ -39,7 +38,7 @@ function UserActivity (props){
             axisLine={false}
             tickLine={false}
             tickCount={3}
-            domain={["dataMin", 'auto']}
+            domain={["dataMin -1", 'auto']}
           />
           <YAxis 
             yAxisId="calories"
