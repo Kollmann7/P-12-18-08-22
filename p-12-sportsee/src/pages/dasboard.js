@@ -20,11 +20,10 @@ function Dashboard() {
     console.log('data', result)
     
     if (userData.length === 0){
-        // console.log('YOOOOW',result[0])
-        setUserData(result[0].data)
-        setActivityData(result[1].data)
-        setAvgSesssionsData(result[2].data)
-        setPerformanceData(result[3].data)
+        setUserData(result[0].data.data)
+        setActivityData(result[1].data.data)
+        setAvgSesssionsData(result[2].data.data)
+        setPerformanceData(result[3].data.data)
     }
     console.log(userData)
     console.log(activityData)
@@ -32,9 +31,13 @@ function Dashboard() {
     console.log(performanceData)
     return(
         <div>
-            <Header/>
-                {/* <Greatings firstname={data.userInfos} /> */}
-            <SideBar/>
+            {result && (
+                <>
+                    <Header/>
+                        <Greatings firstname={userData.userInfos.firstName} />
+                    <SideBar/>
+                </>
+            )}
         </div>
     )
 }
