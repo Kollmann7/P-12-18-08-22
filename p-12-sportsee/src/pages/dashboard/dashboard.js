@@ -6,6 +6,8 @@ import SideBar from "../../components/sidebar/sidebar"
 import Greatings from '../../components/greatings/greatings'
 import UserActivity from '../../components/userActivity/userActivity'
 import UserAgvSessions from '../../components/userAvgSessions/userAvgSessions'
+import UserPerformance from '../../components/userPerformance/userPerformance'
+import TodayScore from '../../components/todayScore/todayScore'
 import './dashboard.css'
 
 
@@ -33,7 +35,7 @@ function Dashboard() {
     }, [userId])
 
     
-    // console.log('userData',userData)
+    console.log('userData',userData)
     console.log('activityData',activityData)
     console.log('avgSesssionsData',avgSesssionsData)
     console.log('performanceData',performanceData)
@@ -48,6 +50,8 @@ function Dashboard() {
                             <UserActivity useractivity={activityData.sessions}/>
                             <div className='user-sessions-wrapper'>
                                 <UserAgvSessions useragvsessions={avgSesssionsData}/>
+                                <UserPerformance userperformance={performanceData} />
+                                <TodayScore todayscore={userData.todayScore}/>
                             </div>
 
                         </div>
