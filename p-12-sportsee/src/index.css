@@ -26,8 +26,8 @@ ul,ol {
 a {
   text-decoration: none;
 }
-.user-wrapper{
-  position : absolute;
-  left : 300px;
-  top : 200px;
+main{
+  position: absolute;
+  left: 200px;
+  top: 130px;
 }
