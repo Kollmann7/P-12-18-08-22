@@ -8,6 +8,7 @@ import UserActivity from '../../components/userActivity/userActivity'
 import UserAgvSessions from '../../components/userAvgSessions/userAvgSessions'
 import UserPerformance from '../../components/userPerformance/userPerformance'
 import TodayScore from '../../components/todayScore/todayScore'
+import UserNutritionSum from '../../components/userNutritionSum/userNutritionSum'
 import './dashboard.css'
 
 
@@ -25,7 +26,6 @@ function Dashboard() {
 
     useEffect(() => {
         FetchApi(userId)
-            .then((reponse) => reponse)
             .then((result) => {
                 setUserData(result[0].data.data)
                 setActivityData(result[1].data.data)
@@ -35,25 +35,31 @@ function Dashboard() {
     }, [userId])
 
     
-    console.log('userData',userData)
-    console.log('activityData',activityData)
-    console.log('avgSesssionsData',avgSesssionsData)
-    console.log('performanceData',performanceData)
+    // console.log('userData',userData)
+    // console.log('activityData',activityData)
+    // console.log('avgSesssionsData',avgSesssionsData)
+    // console.log('performanceData',performanceData)
     return(
         <div>
             {userData && (
                 <>
                     <Header/>
                     <main>
-                        <div className='user-wrapper'>
+                        <div className='user-infos-wrapper'>
                             <Greatings firstname={userData.userInfos.firstName} />
+                        <section className='user-wrapper'>
+                            <article className='user-container'>
                             <UserActivity useractivity={activityData.sessions}/>
                             <div className='user-sessions-wrapper'>
                                 <UserAgvSessions useragvsessions={avgSesssionsData}/>
                                 <UserPerformance userperformance={performanceData} />
-                                <TodayScore todayscore={userData.todayScore}/>
+                                <TodayScore todayscore={userData.score}/>
                             </div>
-
+                            </article>
+                            <div className='user-nutrition-sum'>
+                                <UserNutritionSum usernutritionsum={userData.keyData}/>
+                            </div>
+                        </section>
                         </div>
                     </main>
                     <SideBar/>

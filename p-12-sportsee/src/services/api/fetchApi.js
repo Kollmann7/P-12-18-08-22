@@ -8,11 +8,5 @@ export function FetchApi (userId) {
   const getAvgSesssionsData = axios.get(baseUrl + 'average-sessions')
   const getPerformanceData = axios.get(baseUrl + 'performance')
 
-  const fetchData = async () => {
-    const result = await axios.all([getUserData, getActivityData, getAvgSesssionsData, getPerformanceData])
-
-    return result
-  }
-
-  return (fetchData())
+  return Promise.all([getUserData, getActivityData, getAvgSesssionsData, getPerformanceData])
 }
