@@ -17,10 +17,10 @@ function TodayScore (props) {
       ]
     
       return (
-        <ResponsiveContainer className="score">
+        <ResponsiveContainer className="user-today-score">
           <PieChart width={258} height={263}>
             <svg>
-              <text x="30" y="40" fontSize={15} fill="#20253a">
+              <text x="30" y="40" fontSize={15} fill="#20253A">
                 Score
               </text>
             </svg>
@@ -28,10 +28,10 @@ function TodayScore (props) {
               data={scoreDataModified}
               dataKey="value"
               fill="#FF0000"
-              innerRadius={68}
-              outerRadius={80}
-              startAngle={80}
-              endAngle={480}
+              innerRadius={75}
+              outerRadius={'68%'}
+              startAngle={90}
+              endAngle={360}
             >
               {scoreDataModified.map((entry, index) => (
                 <Cell
@@ -42,8 +42,8 @@ function TodayScore (props) {
               ))}
             </Pie>
             <svg>
-              <circle cx="130" cy="133" r="70" fill="#ffffff" />
-              <text x="105" y="125" fontSize={26} fontWeight="bold" fill="#282d30">
+              <circle cx="130" cy="140" r="80" fill="#ffffff" />
+              <text x="105" y="125" fontSize={26} fontWeight="bold" fill="#20253A">
                 {props.todayscore * 100}%
               </text>
               <text fontSize={16} width="20px" fill="#74798c">
