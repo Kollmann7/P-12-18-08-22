@@ -1,12 +1,26 @@
 import axios from 'axios'
+import constants from '../../constants'
 
-export function FetchApi (userId) {
-  const baseUrl = `http://localhost:3001/user/${userId}/`
+const instance = axios.create({
+  baseURL: constants.baseUrl,
+});
 
-  const getUserData = axios.get(baseUrl)
-  const getActivityData = axios.get(baseUrl + 'activity')
-  const getAvgSesssionsData = axios.get(baseUrl + 'average-sessions')
-  const getPerformanceData = axios.get(baseUrl + 'performance')
+export function FetchUserData (userId) {
+  const getUserData = instance.get(constants.userInfosPath(userId))
+  return getUserData
+}
 
-  return Promise.all([getUserData, getActivityData, getAvgSesssionsData, getPerformanceData])
+export function FetchActivityData (userId) {
+  const getActivityData = instance.get(constants.userActivityPath(userId))
+  return getActivityData
+}
+
+export function FetchAvgSesssionsData ( userId) {
+  const getAvgSesssionsData = instance.get(constants.userAvgSesssionsPath(userId))
+  return getAvgSesssionsData
+}
+
+export function FetchPerformanceData (userId) {
+  const getPerformanceData = instance.get(constants.userPerformancePath(userId))
+  return getPerformanceData
 }
