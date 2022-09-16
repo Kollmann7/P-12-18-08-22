@@ -1,32 +1,29 @@
-.user-activity-container{
-    width: 100%;
-    background-color: #FBFBFB;
-    padding: 20px;
-    border-radius: 5px;
-
+.user-activity-container {
+  width: 100%;
+  background-color: #fbfbfb;
+  padding: 20px;
+  border-radius: 5px;
 }
-.user-activity-wrapper{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    
+.user-activity-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.user-activity-legend{
-    display:flex;
-    gap:20px;
-    
+.user-activity-legend {
+  display: flex;
+  gap: 20px;
 }
-.custom-tool-tip-activity{
-    display:flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    background-color:#E60000;
-    color: white;
-    height:90px;
-    width:60px;
-    font-size: 12px;
-    border: none;
+.custom-tool-tip-activity {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e60000;
+  color: white;
+  height: 90px;
+  width: 60px;
+  font-size: 12px;
+  border: none;
 }

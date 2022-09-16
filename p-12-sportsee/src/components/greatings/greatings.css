@@ -1,13 +1,12 @@
-.greatings{
-    margin-bottom: 70px;
+.greatings {
+  margin-bottom: 70px;
 }
-.user-name{
-    font-weight: 500;
-    font-size: 48px;
-    margin-bottom: 30px;
-
+.user-name {
+  font-weight: 500;
+  font-size: 48px;
+  margin-bottom: 30px;
 }
-.user-text{
-    font-weight: 400;
-    font-size: 18px;
+.user-text {
+  font-weight: 400;
+  font-size: 18px;
 }

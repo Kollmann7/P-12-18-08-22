@@ -1,83 +1,85 @@
-import React from "react"
-import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts'
+import React from 'react'
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+  ResponsiveContainer,
+} from 'recharts'
 import './userActivity.css'
 
-const formatDate = date => {
+const formatDate = (date) => {
   const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
     day: 'numeric',
   }).format(new Date(date))
   return dateTimeFormat
 }
 
-
-function UserActivity (props){
-    return(
-      <div className="user-activity-container">
-        <div className="user-activity-wrapper">
+function UserActivity(props) {
+  return (
+    <div className="user-activity-container">
+      <div className="user-activity-wrapper">
         <div className="user-activity-title">Activité quotidienne</div>
         <div className="user-activity-legend">
           <div> • Poids (kg)</div>
           <div> • Calories brûlées (kCal)</div>
         </div>
-        </div>
-        <ResponsiveContainer width="100%" aspect={3}>
-        <BarChart
-          barGap={5} width="100%"
-          data={props.useractivity}
-        >
-          <XAxis 
-            dataKey="day"
-            tickFormatter={formatDate}
-            strokeDasharray="0"
-            />
-            
-          <YAxis 
+      </div>
+      <ResponsiveContainer width="100%" aspect={3}>
+        <BarChart barGap={5} width="100%" data={props.useractivity}>
+          <XAxis dataKey="day" tickFormatter={formatDate} strokeDasharray="0" />
+
+          <YAxis
             yAxisId="poids"
             orientation="right"
             type="number"
             axisLine={false}
             tickLine={false}
             tickCount={3}
-            domain={["dataMin -1", 'auto']}
+            domain={['dataMin -1', 'auto']}
           />
-          <YAxis 
+          <YAxis
             yAxisId="calories"
             axisLine={false}
             tickLine={false}
             tick={false}
           />
-          <CartesianGrid stroke="#DEDEDE" strokeDasharray="3" vertical={false} />
-          <Tooltip 
-            content={<CustomToolTip/>}
+          <CartesianGrid
+            stroke="#DEDEDE"
+            strokeDasharray="3"
+            vertical={false}
           />
-          <Bar 
+          <Tooltip content={<CustomToolTip />} />
+          <Bar
             yAxisId="calories"
             name="kCal"
             dataKey="calories"
             fill="#282D30"
             barSize={8}
             radius={[50, 50, 0, 0]}
-            />
-          <Bar 
+          />
+          <Bar
             yAxisId="poids"
             name="kg"
             dataKey="kilogram"
             fill="#E60000"
             barSize={8}
             radius={[50, 50, 0, 0]}
-            />
+          />
         </BarChart>
-        </ResponsiveContainer>
-      </div>
-    )
+      </ResponsiveContainer>
+    </div>
+  )
 }
 
-function CustomToolTip ({active, payload}){
-  if (active){
-    return(
+function CustomToolTip({ active, payload }) {
+  if (active) {
+    return (
       <div className="custom-tool-tip-activity">
-          <p>{`${payload[1].value} Kg`}</p>
-          <p>{`${payload[0].value} kCal`}</p>
+        <p>{`${payload[1].value} Kg`}</p>
+        <p>{`${payload[0].value} kCal`}</p>
       </div>
     )
   }

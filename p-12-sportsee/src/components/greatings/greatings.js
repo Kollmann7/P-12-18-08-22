@@ -1,15 +1,18 @@
-import React from "react";
+import React from 'react'
 import './greatings.css'
+import PropTypes from 'prop-types'
 
-function Greatings (props) {
-    console.log(process.env)
-    return(
-        <div className="greatings">
-            <div className="user-name">Bonjour {props.firstname}</div>
-            <div className="user-text">Félicitation ! Vous avez explosé  {process.env.REACT_APP_BIDULE} vos objectifs hier 👏</div>
-        </div>
-        
-    )
+function Greatings(props) {
+  return (
+    <div className="greatings">
+      <div className="user-name">Bonjour {props.firstname}</div>
+      <div className="user-text">
+        Félicitation ! Vous avez explosé vos objectifs hier 👏
+      </div>
+    </div>
+  )
 }
-
+Greatings.propTypes = {
+  props: PropTypes.string.isRequired,
+}
 export default Greatings

@@ -4,12 +4,12 @@ import Navbar from '../navBar/navBar'
 import './header.css'
 
 function Header() {
-    return (
-      <header>
-        <Logo />
-        <Navbar />
-      </header>
-    )
+  return (
+    <header>
+      <Logo />
+      <Navbar />
+    </header>
+  )
 }
 
 export default Header

@@ -1,25 +1,25 @@
 section {
-    display: flex;
-    justify-content: space-between;
-    width: 103%;
-    margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 103%;
+  margin-top: 30px;
 }
 article {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
-    width: 854px;
-    height: 600px;
-    gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  width: 854px;
+  height: 600px;
+  gap: 30px;
 }
-.user-sessions-wrapper{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    width: 100%;
+.user-sessions-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
 }
-.user-nutrition-sum{
-    display: flex;
-    height: auto;
+.user-nutrition-sum {
+  display: flex;
+  height: auto;
 }

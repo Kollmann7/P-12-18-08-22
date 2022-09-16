@@ -1,24 +1,24 @@
-.user-agv-sessions{
-    background-color:#FF0000;
-    border-radius: 5px;
-    width:100%;
-    padding:10px;
+.user-agv-sessions {
+  background-color: #ff0000;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
 }
-.user-avg-title{
-    color:white;
-    left: 30px;
-    position: relative;
-    opacity: 0.8;
-    top: 30px;
-    width: 10.625rem;
+.user-avg-title {
+  color: white;
+  left: 30px;
+  position: relative;
+  opacity: 0.8;
+  top: 30px;
+  width: 10.625rem;
 }
-.custom-tool-tip-avg{
-    background-color: white;
-    color: black;
-    font-size: 12px;
-    height:25px;
-    width:40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.custom-tool-tip-avg {
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  height: 25px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
