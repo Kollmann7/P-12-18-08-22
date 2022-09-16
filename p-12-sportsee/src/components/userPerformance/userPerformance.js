@@ -7,6 +7,8 @@ import {
   Radar,
 } from 'recharts'
 import './userPerformance.css'
+import PropTypes from 'prop-types'
+
 
 function UserPerformance(props) {
   const formatKind = (kind) => {
@@ -28,7 +30,7 @@ function UserPerformance(props) {
           cy="50%"
           cx="50%"
           outerRadius="70%"
-          data={props.userperformance.data}
+          data={props.userperformance}
         >
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
@@ -49,5 +51,7 @@ function UserPerformance(props) {
     </div>
   )
 }
-
+UserPerformance.propTypes = {
+    userperformance: PropTypes.array.isRequired,
+}
 export default UserPerformance

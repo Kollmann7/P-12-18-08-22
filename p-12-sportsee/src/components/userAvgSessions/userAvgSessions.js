@@ -9,6 +9,8 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import './userAvgSessions.css'
+import PropTypes from 'prop-types'
+
 
 const formatDay = (day) => {
   const dayFormat = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
@@ -21,7 +23,7 @@ function UserAgvSessions(props) {
       <div className="user-avg-title">Durée moyenne des sessions</div>
       <ResponsiveContainer width="100%" height={200}>
         <LineChart
-          data={props.useragvsessions.sessions}
+          data={props.useragvsessions}
           margin={{ top: 0, right: 0, bottom: 0, left: -54 }}
         >
           <XAxis
@@ -71,6 +73,10 @@ function UserAgvSessions(props) {
     </div>
   )
 }
+UserAgvSessions.propTypes = {
+    useragvsessions: PropTypes.array.isRequired,
+}
+
 function CustomTooltip({ active, payload }) {
   if (active && payload) {
     return (

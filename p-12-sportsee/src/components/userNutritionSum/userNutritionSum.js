@@ -4,6 +4,8 @@ import Carbs from '../../assets/carbs-icon.svg'
 import Fat from '../../assets/fat-icon.svg'
 import Protein from '../../assets/protein-icon.svg'
 import './userNutritionSum.css'
+import PropTypes from 'prop-types'
+
 
 function UserNutritionSum(props) {
   return (
@@ -46,6 +48,10 @@ function UserNutritionSum(props) {
       </div>
     </div>
   )
+}
+UserNutritionSum.propTypes = {
+    usernutritionsum: PropTypes.object.isRequired,
+    // calorieCount: PropTypes.string.isRequired
 }
 
 export default UserNutritionSum

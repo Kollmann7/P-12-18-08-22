@@ -1,6 +1,7 @@
 import React from 'react'
 import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
 import './todayScore.css'
+import PropTypes from 'prop-types'
 
 function TodayScore(props) {
   const scoreDataModified = [
@@ -58,4 +59,7 @@ function TodayScore(props) {
   )
 }
 
+TodayScore.propTypes = {
+  todayscore: PropTypes.number.isRequired,
+}
 export default TodayScore

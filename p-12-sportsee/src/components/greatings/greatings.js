@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 function Greatings(props) {
   return (
     <div className="greatings">
-      <div className="user-name">Bonjour {props.firstname}</div>
+      <div className="user-name">Bonjour <span className='firstname'>{props.firstname}</span></div>
       <div className="user-text">
         Félicitation ! Vous avez explosé vos objectifs hier 👏
       </div>
@@ -13,6 +13,6 @@ function Greatings(props) {
   )
 }
 Greatings.propTypes = {
-  props: PropTypes.string.isRequired,
+  firstname: PropTypes.string.isRequired,
 }
 export default Greatings

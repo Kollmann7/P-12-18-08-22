@@ -53,8 +53,8 @@ function Dashboard() {
                 <article className="user-container">
                   <UserActivity useractivity={activityData.sessions} />
                   <div className="user-sessions-wrapper">
-                    <UserAgvSessions useragvsessions={avgSesssionsData} />
-                    <UserPerformance userperformance={performanceData} />
+                    <UserAgvSessions useragvsessions={avgSesssionsData.sessions} />
+                    <UserPerformance userperformance={performanceData.data} />
                     <TodayScore todayscore={userData.todayScore} />
                   </div>
                 </article>

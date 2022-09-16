@@ -9,6 +9,8 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import './userActivity.css'
+import PropTypes from 'prop-types'
+
 
 const formatDate = (date) => {
   const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
@@ -72,6 +74,10 @@ function UserActivity(props) {
       </ResponsiveContainer>
     </div>
   )
+}
+
+UserActivity.propTypes = {
+  useractivity: PropTypes.array.isRequired,
 }
 
 function CustomToolTip({ active, payload }) {
