@@ -1,7 +1,7 @@
 .nutrition-container {
   width: 254px;
   height: auto;
-  gap: 40px;
+  gap: 45px;
   display: flex;
   flex-direction: column;
 }
@@ -10,7 +10,7 @@
   align-items: center;
   background-color: #fbfbfb;
   width: 100%;
-  height: 124px;
+  height: 133px;
   border-radius: 5px;
 }
 .container-img {
@@ -21,3 +21,20 @@
   flex-direction: column;
   line-height: 24px;
 }
+@media screen and (max-width: 1400px) {
+  .nutrition-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .container {
+    width: 300px;
+    height: 100px;
+  }
+  .container-infos {
+    padding: 15px;
+  }
+  .container-img {
+    padding: 15px;
+  }
+}
+  

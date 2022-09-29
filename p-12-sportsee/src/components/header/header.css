@@ -5,10 +5,13 @@ header {
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: black;
+  height:140px
 }
 .logo-header {
   width: 200px;
   height: 70px;
+  position: relative;
+  z-index: 100;
 }
 
 .navbar {

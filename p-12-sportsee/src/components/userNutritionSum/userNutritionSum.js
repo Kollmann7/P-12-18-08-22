@@ -49,9 +49,9 @@ function UserNutritionSum(props) {
     </div>
   )
 }
+
 UserNutritionSum.propTypes = {
     usernutritionsum: PropTypes.object.isRequired,
-    // calorieCount: PropTypes.string.isRequired
 }
 
 export default UserNutritionSum

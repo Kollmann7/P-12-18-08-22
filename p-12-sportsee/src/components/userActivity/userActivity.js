@@ -11,7 +11,6 @@ import {
 import './userActivity.css'
 import PropTypes from 'prop-types'
 
-
 const formatDate = (date) => {
   const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
     day: 'numeric',
@@ -25,8 +24,12 @@ function UserActivity(props) {
       <div className="user-activity-wrapper">
         <div className="user-activity-title">Activité quotidienne</div>
         <div className="user-activity-legend">
-          <div> • Poids (kg)</div>
-          <div> • Calories brûlées (kCal)</div>
+          <div className="weight">
+            <span className="black-dot">•</span> Poids (kg)
+          </div>
+          <div className="calories">
+            <span className="red-dot">•</span> Calories brûlées (kCal)
+          </div>
         </div>
       </div>
       <ResponsiveContainer width="100%" aspect={3}>

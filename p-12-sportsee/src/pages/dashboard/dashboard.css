@@ -3,6 +3,7 @@ section {
   justify-content: space-between;
   width: 103%;
   margin-top: 30px;
+  max-width: 1144px;
 }
 article {
   display: flex;
@@ -13,13 +14,28 @@ article {
   height: 600px;
   gap: 30px;
 }
+.user-infos-wrapper{
+  margin-left: 300px;
+  margin-top: 50px;
+}
 .user-sessions-wrapper {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  width: 100%;
+  width: 1054px;
 }
 .user-nutrition-sum {
   display: flex;
   height: auto;
+}
+
+@media screen and (max-width: 1400px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+  .user-infos-wrapper{
+    margin-left: 150px;
+  }
 }
