@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import {
-  FetchUserData,
-  FetchActivityData,
-  FetchAvgSesssionsData,
-  FetchPerformanceData,
+  fetchUserData,
+  fetchActivityData,
+  fetchAvgSesssionsData,
+  fetchPerformanceData,
 } from '../../services/api/fetchApi'
 import { useParams } from 'react-router-dom'
 import Header from '../../components/header/header'
@@ -26,18 +26,18 @@ function Dashboard() {
   const [performanceData, setPerformanceData] = useState(null)
 
   useEffect(() => {
-    FetchUserData(userId).then((result) => {
-      setUserData(result.data.data)
-    })
-    FetchActivityData(userId).then((result) => {
-      setActivityData(result.data.data)
-    })
-    FetchAvgSesssionsData(userId).then((result) => {
-      console.log('res sess', result.data.sessions)
-      setAvgSesssionsData(result.data.data)
-    })
-    FetchPerformanceData(userId).then((result) => {
-      setPerformanceData(result.data.data)
+    Promise.all([
+        fetchUserData(userId),
+        fetchActivityData(userId),
+        fetchAvgSesssionsData(userId),
+        fetchPerformanceData(userId)
+    ]).then((result)=> {
+        const [userDataResult, activityDataResult, avgSesssionsDataResult, performanceDataResult] = result
+        setUserData(userDataResult.data.data)
+        setActivityData(activityDataResult.data.data)
+        setAvgSesssionsData(avgSesssionsDataResult.data.data)
+        setPerformanceData(performanceDataResult.data.data)
+
     })
   }, [userId])
 
@@ -46,7 +46,6 @@ function Dashboard() {
       {userData && (
         <>
           <Header />
-          <main>
             <div className="user-infos-wrapper">
               <Greatings firstname={userData.userInfos.firstName} />
               <section className="user-wrapper">
@@ -63,7 +62,6 @@ function Dashboard() {
                 </div>
               </section>
             </div>
-          </main>
           <SideBar />
         </>
       )}

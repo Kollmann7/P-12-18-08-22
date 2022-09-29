@@ -1,5 +1,5 @@
 const mockUrls = {
-  baseUrl: '/mock/',
+  baseUrl: process.env.REACT_APP_API_BASE_ULR,
   userInfosPath: (userId) => `user_${userId}.json`,
   userActivityPath: (userId) => `user_${userId}/activity.json`,
   userAvgSesssionsPath: (userId) => `user_${userId}/average-sessions.json`,
@@ -7,11 +7,12 @@ const mockUrls = {
 }
 
 const apiUrls = {
-  baseUrl: 'http://localhost:3001/user/',
-  userInfosPath: (userId) => `${userId}`,
-  userActivityPath: (userId) => `${userId}/activity`,
-  userAvgSesssionsPath: (userId) => `${userId}/average-sessions`,
-  userPerformancePath: (userId) => `${userId}/performance`,
+  baseUrl: process.env.REACT_APP_API_BASE_ULR,
+  userInfosPath: (userId) => `user/${userId}`,
+  userActivityPath: (userId) => `user/${userId}/activity`,
+  userAvgSesssionsPath: (userId) => `user/${userId}/average-sessions`,
+  userPerformancePath: (userId) => `user/${userId}/performance`,
 }
 
-export default process.env.mode === 'production' ? apiUrls : mockUrls
+console.log(process.env.REACT_APP_MODE)
+export default process.env.REACT_APP_MODE === 'production' ? apiUrls : mockUrls
