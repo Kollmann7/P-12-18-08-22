@@ -23,7 +23,7 @@ function UserNutritionSum(props) {
         <img src={Protein} className="container-img" alt="Carbs" />
         <div className="container-infos">
           <span>
-            <strong>{props.usernutritionsum.carbohydrateCount} g</strong>
+            <strong>{props.usernutritionsum.proteinCount} g</strong>
           </span>
           <span>Proteines</span>
         </div>
@@ -32,7 +32,7 @@ function UserNutritionSum(props) {
         <img src={Carbs} className="container-img" alt="Fat" />
         <div className="container-infos">
           <span>
-            <strong>{props.usernutritionsum.lipidCount} g</strong>
+            <strong>{props.usernutritionsum.carbohydrateCount} g</strong>
           </span>
           <span>Glucides</span>
         </div>
@@ -41,7 +41,7 @@ function UserNutritionSum(props) {
         <img src={Fat} className="container-img" alt="Protein" />
         <div className="container-infos">
           <span>
-            <strong>{props.usernutritionsum.proteinCount} g</strong>
+            <strong>{props.usernutritionsum.lipidCount} g</strong>
           </span>
           <span>Lipides</span>
         </div>
