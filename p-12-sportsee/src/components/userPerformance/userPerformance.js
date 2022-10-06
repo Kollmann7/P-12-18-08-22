@@ -11,6 +11,10 @@ import PropTypes from 'prop-types'
 
 
 function UserPerformance(props) {
+  /**
+  * @param {number} kind
+  * @return {string} 
+  */
   const formatKind = (kind) => {
     const kindFormat = [
       'Intensité',

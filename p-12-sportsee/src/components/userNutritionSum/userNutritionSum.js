@@ -51,7 +51,7 @@ function UserNutritionSum(props) {
 }
 
 UserNutritionSum.propTypes = {
-    usernutritionsum: PropTypes.object.isRequired,
+  usernutritionsum: PropTypes.object.isRequired,
 }
 
 export default UserNutritionSum

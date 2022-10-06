@@ -3,6 +3,10 @@ import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
 import './todayScore.css'
 import PropTypes from 'prop-types'
 
+
+/**
+  * @param {number} value
+  */
 function TodayScore(props) {
   const scoreDataModified = [
     {

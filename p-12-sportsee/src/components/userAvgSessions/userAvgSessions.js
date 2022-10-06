@@ -11,7 +11,10 @@ import {
 import './userAvgSessions.css'
 import PropTypes from 'prop-types'
 
-
+/**
+  * @param {number} day
+  * @return {string} 
+  */
 const formatDay = (day) => {
   const dayFormat = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
   if (day) return dayFormat[day - 1]
@@ -77,6 +80,10 @@ UserAgvSessions.propTypes = {
     useragvsessions: PropTypes.array.isRequired,
 }
 
+/**
+  * @param {boolean} active
+  * @param {array} payload
+  */
 function CustomTooltip({ active, payload }) {
   if (active && payload) {
     return (

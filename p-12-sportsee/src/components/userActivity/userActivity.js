@@ -11,6 +11,10 @@ import {
 import './userActivity.css'
 import PropTypes from 'prop-types'
 
+/**
+  * @param {number} date
+  * @return {number} 
+  */
 const formatDate = (date) => {
   const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
     day: 'numeric',
@@ -83,6 +87,10 @@ UserActivity.propTypes = {
   useractivity: PropTypes.array.isRequired,
 }
 
+/**
+  * @param {boolean} active
+  * @param {array} payload
+  */
 function CustomToolTip({ active, payload }) {
   if (active) {
     return (
