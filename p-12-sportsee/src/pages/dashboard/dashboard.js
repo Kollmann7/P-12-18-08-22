@@ -27,17 +27,16 @@ function Dashboard() {
 
   useEffect(() => {
     Promise.all([
-        fetchUserData(userId),
-        fetchActivityData(userId),
-        fetchAvgSesssionsData(userId),
-        fetchPerformanceData(userId)
+      fetchUserData(userId),
+      fetchActivityData(userId),
+      fetchAvgSesssionsData(userId),
+      fetchPerformanceData(userId)
     ]).then((result)=> {
-        const [userDataResult, activityDataResult, avgSesssionsDataResult, performanceDataResult] = result
-        setUserData(userDataResult.data.data)
-        setActivityData(activityDataResult.data.data)
-        setAvgSesssionsData(avgSesssionsDataResult.data.data)
-        setPerformanceData(performanceDataResult.data.data)
-
+      const [userDataResult, activityDataResult, avgSesssionsDataResult, performanceDataResult] = result
+      setUserData(userDataResult.data.data)
+      setActivityData(activityDataResult.data.data)
+      setAvgSesssionsData(avgSesssionsDataResult.data.data)
+      setPerformanceData(performanceDataResult.data.data)
     })
   }, [userId])
 

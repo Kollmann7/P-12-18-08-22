@@ -45,7 +45,7 @@ function TodayScore(props) {
           ))}
         </Pie>
         <svg>
-          <circle cx="130" cy="140" r="80" fill="#ffffff" />
+          <circle cx="138" cy="138" r="80" fill="#ffffff" />
           <text x="105" y="125" fontSize={26} fontWeight="bold" fill="#20253A">
             {props.todayscore * 100}%
           </text>
