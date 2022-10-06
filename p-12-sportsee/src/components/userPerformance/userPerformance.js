@@ -12,7 +12,7 @@ import PropTypes from 'prop-types'
 
 function UserPerformance(props) {
   /**
-  * @param {number} kind
+  * @param {string} kind
   * @return {string} 
   */
   const formatKind = (kind) => {
