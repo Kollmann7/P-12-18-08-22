@@ -2,6 +2,10 @@ import React from 'react'
 import './greatings.css'
 import PropTypes from 'prop-types'
 
+/**
+  * @param {string} firstname
+  * 
+  */
 function Greatings(props) {
   return (
     <div className="greatings">
