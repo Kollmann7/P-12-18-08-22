@@ -19,7 +19,9 @@ const formatDay = (day) => {
   const dayFormat = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
   if (day) return dayFormat[day - 1]
 }
-
+/**
+  * @param {number} day
+  */
 function UserAgvSessions(props) {
   return (
     <div className="user-agv-sessions">

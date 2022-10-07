@@ -22,6 +22,9 @@ const formatDate = (date) => {
   return dateTimeFormat
 }
 
+/**
+  * @param {number} day
+  */
 function UserActivity(props) {
   return (
     <div className="user-activity-container">
