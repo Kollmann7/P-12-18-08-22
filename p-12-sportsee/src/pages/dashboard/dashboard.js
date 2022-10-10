@@ -24,7 +24,7 @@ function Dashboard() {
   const [activityData, setActivityData] = useState(null)
   const [avgSesssionsData, setAvgSesssionsData] = useState(null)
   const [performanceData, setPerformanceData] = useState(null)
-  const [errors, setErrors] = useState(null);
+  const [errors, setErrors] = useState(null)
   
 
   useEffect(() => {
@@ -40,13 +40,12 @@ function Dashboard() {
       setAvgSesssionsData(avgSesssionsDataResult.data.data)
       setPerformanceData(performanceDataResult.data.data)
     }).catch(error => {
-      console.log(error.message)
+      console.log(error)
       setErrors('Could not fetch the data')
     })
     
   }, [userId])
 
-  console.log(activityData)
   return (
     <>
       {errors && <div className='error'> {errors} </div>}
