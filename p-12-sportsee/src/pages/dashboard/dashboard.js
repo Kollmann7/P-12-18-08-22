@@ -24,6 +24,8 @@ function Dashboard() {
   const [activityData, setActivityData] = useState(null)
   const [avgSesssionsData, setAvgSesssionsData] = useState(null)
   const [performanceData, setPerformanceData] = useState(null)
+  const [errors, setErrors] = useState(null);
+  
 
   useEffect(() => {
     Promise.all([
@@ -37,11 +39,16 @@ function Dashboard() {
       setActivityData(activityDataResult.data.data)
       setAvgSesssionsData(avgSesssionsDataResult.data.data)
       setPerformanceData(performanceDataResult.data.data)
+    }).catch(error => {
+      console.log(error.message)
+      setErrors('Could not fetch the data')
     })
+    
   }, [userId])
 
   return (
-    <div>
+    <>
+      {errors && <div className='error'> {errors} </div>}
       {userData && (
         <>
           <Header />
@@ -61,11 +68,10 @@ function Dashboard() {
                 </div>
               </section>
             </div>
-            
           <SideBar />
         </>
       )}
-    </div>
+    </>
   )
 }
 

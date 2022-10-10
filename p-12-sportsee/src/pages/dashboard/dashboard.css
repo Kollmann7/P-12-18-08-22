@@ -28,6 +28,14 @@ article {
   display: flex;
   height: auto;
 }
+.error{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  height: 80vh;
+  font-size: 28px;
+}
 
 @media screen and (max-width: 1400px) {
   section {
