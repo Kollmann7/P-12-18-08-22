@@ -20,7 +20,14 @@ const formatDay = (day) => {
   if (day) return dayFormat[day - 1]
 }
 /**
-  * @param {number} day
+ * @typedef UserAgvSessionsProps
+ * @prop {array} useragvsessions - Le string sera utiliser pour le message d'accueil
+ */
+
+/**
+  * This function will display the average session of the user  
+  * @param {UserAgvSessionsProps} props - Le string sera utiliser pour le message d'accueil
+  * @return {ReactElement}
   */
 function UserAgvSessions(props) {
   return (

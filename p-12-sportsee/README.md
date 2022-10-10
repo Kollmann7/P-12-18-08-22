@@ -3,17 +3,27 @@ SportSee
 ## Installation
 
 1. Getting the backend
-This project uses a micro API available with instructions(https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
 
-Clone this repository
+    This project uses a micro API available with instructions(https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
 
-There are 2 users:
+    Clone this repository
 
-http://localhost:3000/user/12
-http://localhost:3000/user/18
+2. Project
 
-2. git clone https://github.com/Kollmann7/P-12-18-08-22
+    2.1 Prerequisites
 
-Run the project 
+        NodeJS (version 16.17.0)
 
-npm start
+        npm
+
+    2.2 Launching the project
+
+        git clone https://github.com/Kollmann7/P-12-18-08-22
+
+        Run the project 
+
+        You need to setup a `.env` in your project, follow the enviroment example.
+
+        ```
+        npm start
+        ```

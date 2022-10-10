@@ -6,7 +6,16 @@ import Protein from '../../assets/protein-icon.svg'
 import './userNutritionSum.css'
 import PropTypes from 'prop-types'
 
+/**
+ * @typedef UserNutritionSum
+ * @prop {object} usernutritionsum - Le string sera utiliser pour le message d'accueil
+ */
 
+/**
+  * This function will display the nutrition summary of the user 
+  * @param {UserNutritionSum} props - Le string sera utiliser pour le message d'accueil
+  * @return {ReactElement}
+  */
 function UserNutritionSum(props) {
   return (
     <div className="nutrition-container">

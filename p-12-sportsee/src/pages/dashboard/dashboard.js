@@ -53,7 +53,7 @@ function Dashboard() {
                   <div className="user-sessions-wrapper">
                     <UserAgvSessions useragvsessions={avgSesssionsData.sessions} />
                     <UserPerformance userperformance={performanceData.data} />
-                    <TodayScore todayscore={userData.todayScore} />
+                    <TodayScore todayscore={userData.todayScore ?? userData.score} />
                   </div>
                 </article>
                 <div className="user-nutrition-sum">
@@ -61,6 +61,7 @@ function Dashboard() {
                 </div>
               </section>
             </div>
+            
           <SideBar />
         </>
       )}

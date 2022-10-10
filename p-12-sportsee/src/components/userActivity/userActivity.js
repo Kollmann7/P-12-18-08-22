@@ -23,7 +23,14 @@ const formatDate = (date) => {
 }
 
 /**
-  * @param {number} day
+ * @typedef UserActivityProps
+ * @prop {array} useractivity - Le string sera utiliser pour le message d'accueil
+ */
+
+/**
+  * This function will display the activity of the user  
+  * @param {UserActivityProps} props - Le string sera utiliser pour le message d'accueil
+  * @return {ReactElement}
   */
 function UserActivity(props) {
   return (

@@ -9,7 +9,16 @@ import {
 import './userPerformance.css'
 import PropTypes from 'prop-types'
 
+/**
+ * @typedef UserPerformance
+ * @prop {array} usernutritionsum - Le string sera utiliser pour le message d'accueil
+ */
 
+/**
+  * This function will display the performance of the user 
+  * @param {UserPerformance} props - Le string sera utiliser pour le message d'accueil
+  * @return {ReactElement}
+  */
 function UserPerformance(props) {
   /**
   * @param {string} kind

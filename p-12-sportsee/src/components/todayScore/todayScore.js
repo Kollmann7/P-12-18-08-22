@@ -5,7 +5,14 @@ import PropTypes from 'prop-types'
 
 
 /**
-  * @param {number} value
+ * @typedef TodayScoreProps
+ * @prop {number} todayscore - It's the today score of the user
+ */
+
+/**
+  * This function will display the day score of the user 
+  * @param {TodayScoreProps} props - 
+  * @return {ReactElement}
   */
 function TodayScore(props) {
   const scoreDataModified = [
