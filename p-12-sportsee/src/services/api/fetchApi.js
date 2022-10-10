@@ -5,14 +5,14 @@ const instance = axios.create({
   baseURL: constants.baseUrl,
 })
 /**
- * @typedef UserData 
- * @prop {string} userId
+ * @typedef UserDataProps 
+ * @prop {number} userId
  */
 
 /**
  *  This function realise a call API and get the user data
  * @param {number} userId - identification of the user
- * @returns {Promise<UserData>} - data of user
+ * @returns {Promise<UserData>} - data of a user
  */
 
 export function fetchUserData(userId) {
@@ -21,13 +21,13 @@ export function fetchUserData(userId) {
 }
 /**
  * @typedef ActivityData 
- * @prop {string} userId
+ * @prop {number} userId
  */
 
 /**
  *  This function realise a call API and get the user activity data
  * @param {number} userId - identification of the user
- * @returns {Promise<ActivityData>} - data of user activity
+ * @returns {Promise<ActivityData>} - data of a user activity
  */
 export function fetchActivityData(userId) {
   const getActivityData = instance.get(constants.userActivityPath(userId))
@@ -35,13 +35,13 @@ export function fetchActivityData(userId) {
 }
 /**
  * @typedef AvgSesssionsData 
- * @prop {string} userId
+ * @prop {number} userId
  */
 
 /**
  *  This function realise a call API and get the user averge sessions data
  * @param {number} userId - identification of the user
- * @returns {Promise<AvgSesssionsData>} - data of user averge sessions
+ * @returns {Promise<AvgSesssionsData>} - data of a user averge sessions
  */
 export function fetchAvgSesssionsData(userId) {
   const getAvgSesssionsData = instance.get(constants.userAvgSesssionsPath(userId))
@@ -49,13 +49,13 @@ export function fetchAvgSesssionsData(userId) {
 }
 /**
  * @typedef PerformanceData 
- * @prop {string} userId
+ * @prop {number} userId
  */
 
 /**
  *  This function realise a call API and get the user performance data
  * @param {number} userId - identification of the user
- * @returns {Promise<PerformanceData>} - data of user performance
+ * @returns {Promise<PerformanceData>} - data of a user performance
  */
 export function fetchPerformanceData(userId) {
   const getPerformanceData = instance.get(constants.userPerformancePath(userId))

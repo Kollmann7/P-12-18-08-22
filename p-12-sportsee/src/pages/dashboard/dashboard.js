@@ -46,6 +46,7 @@ function Dashboard() {
     
   }, [userId])
 
+  console.log(activityData)
   return (
     <>
       {errors && <div className='error'> {errors} </div>}

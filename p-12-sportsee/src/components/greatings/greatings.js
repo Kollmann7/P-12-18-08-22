@@ -8,8 +8,8 @@ import PropTypes from 'prop-types'
  */
 
 /**
-  * This function display the user name
-  * @param {GreatingsProps} props - The string will show the user name
+  * This function display the firstname
+  * @param {GreatingsProps} props - The string will show the firstname
   * @return {ReactElement}
   */
 function Greatings(props) {

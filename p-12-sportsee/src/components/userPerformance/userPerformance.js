@@ -11,18 +11,18 @@ import PropTypes from 'prop-types'
 
 /**
  * @typedef UserPerformance
- * @prop {array} usernutritionsum - Le string sera utiliser pour le message d'accueil
+ * @prop {array} userperformance - This array give us the performance of the user 
  */
 
 /**
   * This function will display the performance of the user 
-  * @param {UserPerformance} props - Le string sera utiliser pour le message d'accueil
+  * @param {UserPerformance} props - This array give us the kind and value
   * @return {ReactElement}
   */
 function UserPerformance(props) {
   /**
   * @param {string} kind
-  * @return {string} 
+  * @return {string} the kind of performance in french
   */
   const formatKind = (kind) => {
     const kindFormat = [

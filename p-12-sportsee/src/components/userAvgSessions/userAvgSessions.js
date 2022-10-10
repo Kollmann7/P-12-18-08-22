@@ -13,7 +13,7 @@ import PropTypes from 'prop-types'
 
 /**
   * @param {number} day
-  * @return {string} 
+  * @return {string} - day in alphabetical format
   */
 const formatDay = (day) => {
   const dayFormat = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
@@ -21,12 +21,12 @@ const formatDay = (day) => {
 }
 /**
  * @typedef UserAgvSessionsProps
- * @prop {array} useragvsessions - Le string sera utiliser pour le message d'accueil
+ * @prop {array} useragvsessions - This array gives us the session length per day
  */
 
 /**
   * This function will display the average session of the user  
-  * @param {UserAgvSessionsProps} props - Le string sera utiliser pour le message d'accueil
+  * @param {UserAgvSessionsProps} props - This array gives us the session length per day
   * @return {ReactElement}
   */
 function UserAgvSessions(props) {

@@ -13,7 +13,7 @@ import PropTypes from 'prop-types'
 
 /**
   * @param {number} date
-  * @return {number} 
+  * @return {number} - new date with british numerical format 
   */
 const formatDate = (date) => {
   const dateTimeFormat = new Intl.DateTimeFormat('en-GB', {
@@ -24,12 +24,12 @@ const formatDate = (date) => {
 
 /**
  * @typedef UserActivityProps
- * @prop {array} useractivity - Le string sera utiliser pour le message d'accueil
+ * @prop {array} useractivity - this array gives us the kilograms and the calories for each day 
  */
 
 /**
   * This function will display the activity of the user  
-  * @param {UserActivityProps} props - Le string sera utiliser pour le message d'accueil
+  * @param {UserActivityProps} props - this array gives us the kilograms and the calories for each day 
   * @return {ReactElement}
   */
 function UserActivity(props) {

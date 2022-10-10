@@ -6,11 +6,11 @@ import PropTypes from 'prop-types'
 
 /**
  * @typedef TodayScoreProps
- * @prop {number} todayscore - It's the today score of the user
+ * @prop {number} todayscore - Daily score of the user
  */
 
 /**
-  * This function will display the day score of the user 
+  * This function will display the daily score of the user 
   * @param {TodayScoreProps} props - 
   * @return {ReactElement}
   */

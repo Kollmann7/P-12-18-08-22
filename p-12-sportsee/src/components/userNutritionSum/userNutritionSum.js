@@ -8,12 +8,12 @@ import PropTypes from 'prop-types'
 
 /**
  * @typedef UserNutritionSum
- * @prop {object} usernutritionsum - Le string sera utiliser pour le message d'accueil
+ * @prop {object} usernutritionsum - This object give us calories and nutrients intake
  */
 
 /**
   * This function will display the nutrition summary of the user 
-  * @param {UserNutritionSum} props - Le string sera utiliser pour le message d'accueil
+  * @param {UserNutritionSum} props - This object give us calories and nutrients intake
   * @return {ReactElement}
   */
 function UserNutritionSum(props) {
