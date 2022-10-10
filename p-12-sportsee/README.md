@@ -20,6 +20,9 @@ SportSee
 
         git clone https://github.com/Kollmann7/P-12-18-08-22
 
+        ```
+        npm i
+        ```
         Run the project 
 
         You need to setup a `.env` in your project, follow the enviroment example.
@@ -27,3 +30,13 @@ SportSee
         ```
         npm start
         ```
+3. Available script
+
+    npm start
+
+        Runs the app in the developement mode.
+        Open http:/localhost:3000
+    
+    npm build
+
+        Buid the app for production to the build folder.
