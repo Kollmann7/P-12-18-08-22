@@ -5,7 +5,6 @@ const instance = axios.create({
   baseURL: constants.baseUrl,
   timeout: 1000
 })
-console.log(instance.get('http://localhost:3001/user/12'))
 /**
  * @typedef UserDataProps 
  * @prop {number} userId

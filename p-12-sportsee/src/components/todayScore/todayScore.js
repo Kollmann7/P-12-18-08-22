@@ -11,7 +11,7 @@ import PropTypes from 'prop-types'
 
 /**
   * This function will display the daily score of the user 
-  * @param {TodayScoreProps} props - 
+  * @param {TodayScoreProps} props - Daily score of the user
   * @return {ReactElement}
   */
 function TodayScore(props) {
