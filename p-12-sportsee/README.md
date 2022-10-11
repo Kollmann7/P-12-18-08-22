@@ -4,7 +4,7 @@ SportSee
 
 1. Getting the backend
 
-    This project uses a micro API available with instructions(https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
+    This project uses a micro API available with instructions (https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
 
     Clone this repository
 
@@ -25,16 +25,16 @@ SportSee
         ```
         Run the project 
 
-        You need to setup a `.env` in your project, follow the enviroment example.
+        You need to setup a `.env` in your project, follow the environment example.
 
         ```
         npm start
         ```
-3. Available script
+3. Available scripts
 
     npm start
 
-        Runs the app in the developement mode.
+        Runs the app in the development mode.
         Open http:/localhost:3000
     
     npm build
