@@ -16,6 +16,9 @@ import TodayScore from '../../components/todayScore/todayScore'
 import UserNutritionSum from '../../components/userNutritionSum/userNutritionSum'
 import './dashboard.css'
 
+/**
+  * @return {ReactElement}
+  */
 function Dashboard() {
   const params = useParams()
   const userId = params.id
@@ -48,7 +51,13 @@ function Dashboard() {
 
   return (
     <>
-      {errors && <div className='error'> {errors} </div>}
+      {errors &&
+      <>
+        <Header /> 
+          <div className='error'> {errors} </div>
+        <SideBar />
+      </>
+      }
       {userData && (
         <>
           <Header />
