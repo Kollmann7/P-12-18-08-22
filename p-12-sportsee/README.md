@@ -10,6 +10,8 @@ SportSee
 
 2. Project
 
+    visual studio code ( version 1.72)
+
     2.1 Prerequisites
 
         NodeJS (version 16.17.0)
