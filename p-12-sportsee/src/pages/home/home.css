@@ -1,0 +1,15 @@
+.user-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:space-evenly;
+  height:70vh;
+}
+
+.user-display{
+  font-weight:bold;
+  font-size:24px;
+  height:50px;
+  display:flex;
+  color:red;
+  text-decoration: underline;
+}
