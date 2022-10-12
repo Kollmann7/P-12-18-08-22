@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 import './home.css'
 
 /**
-  * @return {ReactElement}
+  * This function will display the home page 
+  * @return {ReactElement} - Display the home page 
   */
 function Home() {
   return (

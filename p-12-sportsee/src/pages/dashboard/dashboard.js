@@ -17,7 +17,8 @@ import UserNutritionSum from '../../components/userNutritionSum/userNutritionSum
 import './dashboard.css'
 
 /**
-  * @return {ReactElement}
+  * This function will display the dashboard page
+  * @return {ReactElement} - Display the dashboard page
   */
 function Dashboard() {
   const params = useParams()

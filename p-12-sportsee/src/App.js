@@ -4,7 +4,8 @@ import Home from './pages/home/home'
 import Dashboard from './pages/dashboard/dashboard'
 
 /**
-  * @return {ReactElement}
+  * This fuction will setup url for navigation  
+  * @return {ReactElement} 
   */
 function App() {
   return (
